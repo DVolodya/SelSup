@@ -2,6 +2,7 @@
 //import com.fasterxml.jackson.core.JsonProcessingException;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 //import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+// Не подгружаются зависисмости, из-за этого ошибки
 
 import java.io.IOException;
 import java.net.URI;
@@ -25,7 +26,6 @@ public class CrptApi {
     private final ReentrantLock lock;
     private final List<LocalDateTime> requestTimestamps;
 
-    // Константы для API
     private static final String BASE_URL = "https://ismp.crpt.ru/api/v3";
     private static final String CREATE_DOCUMENT_PATH = "/lk/documents/create";
 
